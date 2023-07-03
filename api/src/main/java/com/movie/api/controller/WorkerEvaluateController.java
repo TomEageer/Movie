@@ -4,6 +4,7 @@ import com.movie.api.model.entity.WorkerEvaluate;
 import com.movie.api.service.WorkerEvaluateService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -14,7 +15,7 @@ import java.util.List;
 @RequestMapping("/api/we")
 public class WorkerEvaluateController {
 
-    @Resource
+    @Autowired
     private WorkerEvaluateService workerEvaluateService;
 
     @PostMapping("")

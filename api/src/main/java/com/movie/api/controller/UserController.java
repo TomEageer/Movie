@@ -7,6 +7,7 @@ import com.movie.api.service.UserService;
 import com.movie.api.utils.JwtTokenUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -20,7 +21,7 @@ import java.util.Map;
 @RequestMapping("/api/user")
 public class UserController {
 
-    @Resource
+    @Autowired
     private UserService userService;
 
     @PostMapping("/login")

@@ -5,6 +5,7 @@ import com.movie.api.model.entity.Role;
 import com.movie.api.service.RoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ import java.util.List;
 @RequestMapping("/api/role")
 public class RoleController {
 
-    @Resource
+    @Autowired
     private RoleService roleService;
 
     @GetMapping("/system")

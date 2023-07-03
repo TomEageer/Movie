@@ -9,6 +9,7 @@ import com.movie.api.service.WorkerService;
 import com.movie.api.utils.JwtTokenUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -22,10 +23,10 @@ import java.util.Map;
 @RequestMapping("/api/worker")
 public class WorkerController {
 
-    @Resource
+    @Autowired
     private WorkerService workerService;
 
-    @Resource
+    @Autowired
     private RoleService roleService;
 
     @PostMapping("/login")
