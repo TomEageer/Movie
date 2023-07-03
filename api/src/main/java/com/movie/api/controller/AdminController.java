@@ -4,6 +4,7 @@ import com.movie.api.model.dto.LoginDto;
 import com.movie.api.service.AdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -15,7 +16,7 @@ import java.util.Map;
 @RequestMapping("/api/admin")
 public class AdminController {
 
-    @Resource
+    @Autowired
     private AdminService adminService;
 
     @PostMapping("/login")
