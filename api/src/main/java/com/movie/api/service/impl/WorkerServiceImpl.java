@@ -10,6 +10,7 @@ import com.movie.api.model.entity.Worker;
 import com.movie.api.service.RoleService;
 import com.movie.api.service.WorkerService;
 import com.movie.api.utils.DataTimeUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -20,16 +21,16 @@ import java.util.UUID;
 @Service
 public class WorkerServiceImpl implements WorkerService {
 
-    @Resource
+    @Autowired
     private WorkerMapper workerMapper;
 
-    @Resource
+    @Autowired
     private RoleService roleService;
 
-    @Resource
+    @Autowired
     private RoleMapper roleMapper;
 
-    @Resource
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override

@@ -5,6 +5,7 @@ import com.movie.api.mapper.WorkerEvaluateMapper;
 import com.movie.api.model.entity.WorkerEvaluate;
 import com.movie.api.service.WorkerEvaluateService;
 import com.movie.api.utils.DataTimeUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ import java.util.UUID;
 @CacheConfig(cacheNames = "workerEvaluate")
 public class WorkerEvaluateServiceImpl implements WorkerEvaluateService {
 
-    @Resource
+    @Autowired
     private WorkerEvaluateMapper workerEvaluateMapper;
 
     @Override

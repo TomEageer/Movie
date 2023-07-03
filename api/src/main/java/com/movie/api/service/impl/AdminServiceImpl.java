@@ -7,6 +7,7 @@ import com.movie.api.model.dto.LoginDto;
 import com.movie.api.model.entity.Admin;
 import com.movie.api.service.AdminService;
 import com.movie.api.utils.JwtTokenUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,7 +17,7 @@ import java.util.List;
 @Service
 public class AdminServiceImpl implements AdminService {
 
-    @Resource
+    @Autowired
     private AdminMapper adminMapper;
 
     @Override

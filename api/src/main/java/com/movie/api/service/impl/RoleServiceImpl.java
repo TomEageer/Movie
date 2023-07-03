@@ -6,6 +6,7 @@ import com.movie.api.mapper.RoleMapper;
 import com.movie.api.model.entity.Role;
 import com.movie.api.service.RoleService;
 import com.movie.api.utils.DataTimeUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ import java.util.UUID;
 @CacheConfig(cacheNames = "role")
 public class RoleServiceImpl implements RoleService {
 
-    @Resource
+    @Autowired
     private RoleMapper roleMapper;
 
     @Override
