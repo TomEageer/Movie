@@ -23,8 +23,10 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public String login(LoginDto loginDto) throws Exception {
         QueryWrapper<Admin> wrapper = new QueryWrapper<>();
+
         wrapper.in("username", loginDto.getUsername());
         wrapper.in("password", loginDto.getPassword());
+
         Admin admin = adminMapper.selectOne(wrapper);
         if (admin == null) throw new Exception("用户名密码错误");
         //是否选择记住我
